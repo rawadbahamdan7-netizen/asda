@@ -64,7 +64,6 @@
   .blob2{width:380px; height:380px; bottom:-100px; right:-120px; background:radial-gradient(circle, rgba(224,98,63,0.14), transparent 70%);}
   .blob3{width:300px; height:300px; top:45%; left:44%; background:radial-gradient(circle, rgba(201,154,63,0.10), transparent 70%);}
 
-  /* ===== SIDE DOT NAV ===== */
   .dotnav{position:fixed; top:50%; left:22px; transform:translateY(-50%); z-index:60; display:flex; flex-direction:column; gap:13px;}
   @media(max-width:980px){ .dotnav{display:none;} }
   .dotnav a{width:9px; height:9px; border-radius:50%; background:rgba(19,79,73,0.22); display:block; position:relative; transition:.3s; text-decoration:none;}
@@ -97,7 +96,6 @@
   .stagger.in > *:nth-child(7){transition-delay:.65s;}
   .stagger.in > *:nth-child(8){transition-delay:.75s;}
 
-  /* ===== HERO ===== */
   header.hero{
     position:relative;
     padding:64px 28px 0;
@@ -147,11 +145,7 @@
   .hero-art img{ position:absolute; top:0; right:0; width:100%; height:100%; object-fit:contain; filter:drop-shadow(0 18px 26px rgba(0,0,0,0.25)); border-radius:15px;}
   .pulse-ring{animation:pulse 2.6s ease-in-out infinite;}
   @keyframes pulse{0%,100%{transform:scale(1); opacity:.55;}50%{transform:scale(1.12); opacity:.15;}}
-  .drop-bob{animation:bob 4.5s ease-in-out infinite;}
-  .drop-bob2{animation:bob 5.5s ease-in-out infinite; animation-delay:.6s;}
-  .drop-bob3{animation:bob 3.8s ease-in-out infinite; animation-delay:1.1s;}
-  .drop-bob4{animation:bob 5s ease-in-out infinite; animation-delay:.3s;}
-  @keyframes bob{0%,100%{transform:translateY(0);}50%{transform:translateY(-14px);}}
+
   @keyframes rise{from{opacity:0; transform:translateY(18px);} to{opacity:1; transform:translateY(0);}}
 
   .ecg-wrap{width:100%; overflow:hidden; line-height:0;}
@@ -159,7 +153,6 @@
   @keyframes draw{to{stroke-dashoffset:0;}}
   .wave-divider{display:block; width:100%; line-height:0;}
 
-  /* ===== TOC ===== */
   .toc{
     display:flex; flex-wrap:wrap; gap:10px; margin:-30px 0 56px; position:relative; z-index:2;
     background:var(--paper-soft); border:1px solid var(--line); border-radius:16px; padding:18px 20px;
@@ -172,7 +165,6 @@
   }
   .toc a:hover{background:var(--teal); color:#fff;}
 
-  /* ===== SECTION STRUCTURE ===== */
   section{margin-bottom:64px; scroll-margin-top:20px;}
   .sec-head{display:flex; align-items:center; gap:18px; margin-bottom:26px;}
   .sec-num{font-family:'Aref Ruqaa', serif; font-size:26px; color:#fff; line-height:1; min-width:58px; height:58px; position:relative;
@@ -192,7 +184,6 @@
   .article-cols p{break-inside:avoid; margin-bottom:15px;}
   @media(max-width:760px){ .article-cols{columns:1;} }
 
-  /* ===== MECHANISM DIAGRAM ===== */
   .mech-panel{
     background:var(--paper-soft); border:1px solid var(--line); border-radius:20px;
     padding:26px; box-shadow:var(--shadow); margin-top:20px; position:relative; overflow:hidden;
@@ -207,7 +198,6 @@
   .mech-legend .row{display:flex; align-items:center; gap:10px; font-size:13.5px;}
   .dot{width:12px; height:12px; border-radius:50%; flex-shrink:0;}
 
-  /* ===== DEVICES (insulin pen / syringe / glucometer / pump) ===== */
   .device-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-top:22px;}
   @media(max-width:800px){ .device-grid{grid-template-columns:1fr 1fr;} }
   @media(max-width:520px){ .device-grid{grid-template-columns:1fr;} }
@@ -231,13 +221,11 @@
   .syringe-steps div{display:flex; gap:10px; align-items:flex-start; font-size:13px; color:#dcefeb;}
   .syringe-steps span.n{background:rgba(255,255,255,0.18); border-radius:50%; width:20px; height:20px; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:800; flex-shrink:0;}
 
-  /* droplet path animation for the needle drop */
   .needle-drop{animation:dropfall 2.6s ease-in-out infinite;}
   @keyframes dropfall{0%{opacity:0; transform:translateY(-6px);}30%{opacity:1;}70%{opacity:1; transform:translateY(10px);}100%{opacity:0; transform:translateY(16px);}}
   .needle-in-out{animation:needlepush 3.2s ease-in-out infinite;}
   @keyframes needlepush{0%,100%{transform:translateY(0);}40%{transform:translateY(14px);}55%{transform:translateY(14px);}100%{transform:translateY(0);}}
 
-  /* ===== INFO CARDS ===== */
   .cards{display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-top:10px;}
   @media(max-width:760px){.cards{grid-template-columns:1fr;}}
   .card{background:var(--paper-soft); border:1px solid var(--line); border-radius:4px 18px 4px 18px; padding:26px 22px; position:relative; box-shadow:var(--shadow); transition:transform .35s ease, box-shadow .35s ease; overflow:hidden;}
@@ -247,7 +235,6 @@
   .card h4{margin:0 0 8px; font-size:18px; color:var(--teal-dark);}
   .card p{font-size:14.5px; margin:0; color:#4a4a3f;}
 
-  /* ===== GRID LISTS with custom icons (causes / symptoms / prevention) ===== */
   .icon-grid{list-style:none; margin:0; padding:0; display:grid; grid-template-columns:1fr 1fr; gap:14px;}
   @media(max-width:700px){ .icon-grid{grid-template-columns:1fr;} }
   .icon-grid li{display:flex; gap:16px; align-items:flex-start; background:var(--paper-soft); border:1px solid var(--line); padding:16px 18px; border-radius:12px; transition:transform .3s ease, border-color .3s ease, box-shadow .3s ease;}
@@ -264,7 +251,6 @@
   .icon-grid b{color:var(--teal-dark); display:block; margin-bottom:2px; font-size:16px;}
   .icon-grid span{font-size:14px; color:#4a4a3f;}
 
-  /* ===== COMPLICATIONS: body map + cards ===== */
   .compli-wrap{display:grid; grid-template-columns:0.8fr 1.2fr; gap:30px; align-items:center;}
   @media(max-width:800px){ .compli-wrap{grid-template-columns:1fr;} }
   .bodymap{background:var(--paper-soft); border:1px solid var(--line); border-radius:20px; padding:20px; box-shadow:var(--shadow); text-align:center;}
@@ -280,7 +266,6 @@
   .compli-card h5{margin:0 0 4px; font-size:15px; color:var(--teal-dark);}
   .compli-card p{margin:0; font-size:12.8px; color:#5a5a4d;}
 
-  /* ===== TABLE ===== */
   .table-wrap{overflow-x:auto; border-radius:14px; box-shadow:var(--shadow); border:1px solid var(--line); border-top:5px solid var(--teal);}
   table{width:100%; border-collapse:collapse; background:var(--paper-soft); min-width:680px;}
   thead tr{background:linear-gradient(120deg, var(--teal-dark), var(--teal));}
@@ -292,7 +277,6 @@
   tbody td:first-child svg{width:20px; height:20px; flex-shrink:0;}
   tbody tr:hover{background:rgba(224,98,63,0.10);}
 
-  /* ===== GLUCOSE RANGE GAUGE ===== */
   .gauge-panel{background:var(--paper-soft); border:1px solid var(--line); border-radius:18px; padding:30px 32px; box-shadow:var(--shadow); border-bottom:5px solid var(--gold);}
   .gauge-row{display:grid; grid-template-columns:170px 1fr; align-items:center; gap:18px; margin-bottom:22px;}
   @media(max-width:640px){ .gauge-row{grid-template-columns:1fr; gap:8px;} }
@@ -305,7 +289,6 @@
   .gauge-track.animed .gauge-marker{opacity:1;}
   .gauge-scale{display:flex; justify-content:space-between; font-size:11px; color:#8a8a7a; margin-top:6px;}
 
-  /* ===== CHART ===== */
   .chart-panel{background:var(--paper-soft); border:1px solid var(--line); border-radius:18px; padding:34px 32px 26px; box-shadow:var(--shadow); position:relative; overflow:hidden; margin-bottom:22px; border-right:5px solid var(--coral);}
   .chart-panel .globe-deco{position:absolute; left:-30px; top:-30px; opacity:.06; width:180px;}
   .chart-title{font-size:16.5px; font-weight:800; color:var(--teal-dark); margin:0 0 18px; display:flex; align-items:center; gap:10px;}
@@ -325,11 +308,9 @@
   .bar-val.gold{color:#8f6a20;}
   .chart-note{font-size:13.5px; color:#6b6b5e; margin-top:20px; text-align:center; position:relative; z-index:1;}
 
-  /* continents legend */
   .continents{display:flex; flex-wrap:wrap; gap:10px; justify-content:center; margin-top:16px;}
   .continents span{font-size:12px; background:rgba(19,79,73,0.07); color:var(--teal-dark); padding:5px 12px; border-radius:100px; font-weight:700;}
 
-  /* ===== TIMELINE (history) ===== */
   .timeline{position:relative; padding-right:34px; margin-top:10px;}
   .timeline::before{content:""; position:absolute; right:9px; top:6px; bottom:6px; width:2px; background:var(--line);}
   .tl-item{position:relative; padding-bottom:28px;}
@@ -339,7 +320,6 @@
   .tl-item h5{margin:0 0 4px; font-size:15.5px; color:var(--teal-dark);}
   .tl-item p{margin:0; font-size:14px; color:#4a4a3f;}
 
-  /* ===== MYTHS VS FACTS ===== */
   .myths{display:flex; flex-direction:column; gap:14px; margin-top:10px;}
   .myth-row{display:grid; grid-template-columns:1fr 1fr; gap:14px;}
   @media(max-width:700px){ .myth-row{grid-template-columns:1fr;} }
@@ -351,7 +331,6 @@
   .myth-box.fact .tag{background:var(--teal); color:#fff;}
   .myth-box p{margin:0; font-size:13.8px; color:#333;}
 
-  /* ===== FAQ ===== */
   .faq{display:flex; flex-direction:column; gap:12px; margin-top:10px;}
   .faq-item{background:var(--paper-soft); border:1px solid var(--line); border-radius:12px; overflow:hidden;}
   .faq-item summary{cursor:pointer; list-style:none; padding:16px 20px; font-size:15.5px; font-weight:700; color:var(--teal-dark); display:flex; justify-content:space-between; align-items:center; gap:14px;}
@@ -360,7 +339,6 @@
   .faq-item[open] summary::after{transform:rotate(45deg);}
   .faq-item .faq-a{padding:0 20px 18px; font-size:14.5px; color:#4a4a3f;}
 
-  /* ===== SUMMARY / STATS BAND ===== */
   .band{background:var(--teal-dark); color:var(--paper-soft); border-radius:20px; padding:40px 36px 28px; display:grid; grid-template-columns:repeat(4,1fr); gap:24px; text-align:center; position:relative; overflow:hidden;}
   @media(max-width:760px){.band{grid-template-columns:repeat(2,1fr);}}
   .band::before{content:""; position:absolute; inset:0; background:radial-gradient(circle at 90% 10%, rgba(224,98,63,0.25), transparent 50%);}
@@ -369,7 +347,6 @@
   .band .lbl{font-size:13px; opacity:0.85; margin-top:6px;}
   .band .ecg-strip{grid-column:1/-1; margin-top:14px; opacity:.5;}
 
-  /* ===== TYPES ===== */
   .types{display:grid; grid-template-columns:1fr 1fr 1fr; gap:20px;}
   @media(max-width:760px){.types{grid-template-columns:1fr;}}
   .type-card{border-radius:16px; padding:24px; color:#fff; position:relative; overflow:hidden; transition:transform .35s ease;}
@@ -385,14 +362,12 @@
   .type-card::before{content:""; position:absolute; width:90px; height:90px; border-radius:50%; border:2px dashed rgba(255,255,255,0.18); bottom:-40px; right:-30px;}
   .type-card{box-shadow:0 16px 30px -14px rgba(12,43,42,0.4);}
 
-  /* ===== AGE / GENDER MINI STATS ===== */
   .mini-stats{display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-top:20px;}
   @media(max-width:700px){.mini-stats{grid-template-columns:1fr 1fr;}}
   .mini-stat{background:var(--paper-soft); border:1px solid var(--line); border-radius:14px; padding:18px; text-align:center; box-shadow:var(--shadow);}
   .mini-stat .v{font-family:'Aref Ruqaa',serif; font-size:28px; color:var(--coral);}
   .mini-stat .l{font-size:12px; color:#5a5a4d; margin-top:4px;}
 
-  /* ===== REFERENCES ===== */
   .refs{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:12px;}
   .refs li{
     display:flex; gap:14px; align-items:flex-start;
@@ -406,7 +381,6 @@
   .refs a{color:var(--coral); font-size:12.5px; word-break:break-all; text-decoration:none;}
   .refs a:hover{text-decoration:underline;}
 
-  /* ===== FOOTER ===== */
   footer{text-align:center; padding:40px 20px 10px; color:#6b6b5e; font-size:13.5px; border-top:1px dashed var(--line); margin-top:20px;}
   footer .sig{font-family:'Aref Ruqaa',serif; font-size:20px; color:var(--teal-dark); margin-bottom:8px;}
   footer svg{width:60px; opacity:.5; margin-bottom:6px;}
@@ -416,7 +390,6 @@
 
   ::selection{background:var(--coral); color:#fff;}
 
-  /* ===== DARK MODE ===== */
   body.dark{
     background:
       radial-gradient(ellipse at top left, rgba(95,184,172,0.09), transparent 55%),
@@ -517,8 +490,7 @@
       </div>
     </div>
     <div class="hero-art">
-      <!-- تم وضع صورة حقيقية هنا (رابط مباشر من الإنترنت) -->
-<img src="https://i.postimg.cc/FKBB8PBf/pancreas.png" alt="صورة البنكرياس الحقيقية" style="position:absolute; top:0; right:0; width:100%; height:100%; object-fit:contain; filter:drop-shadow(0 18px 26px rgba(0,0,0,0.25)); border-radius:15px;" />    </div>
+<img src="https://raw.githubusercontent.com/rawadbahamdan7-netizen/asda/main/pancreas.png" alt="صورة توضيحية للبنكرياس" />    </div>
   </div>
   <div class="ecg-wrap">
     <svg viewBox="0 0 1000 60" preserveAspectRatio="none" style="width:100%; height:44px; display:block;">
@@ -547,7 +519,6 @@
     <a href="#s14">المصادر</a>
   </nav>
 
-  <!-- ١ المقدمة -->
   <section id="s1">
     <div class="sec-head"><span class="sec-num" data-reveal="scale">١</span><span class="sec-title" data-reveal="right">المقدّمة</span><span class="sec-line" data-reveal></span></div>
     <p class="lede" data-reveal>يُعدّ مرض السكري من أكثر الأمراض المزمنة انتشارًا في العالم اليوم، إذ يصيب مئات الملايين من البشر في كل قارة تقريبًا، ويشكّل تحديًا صحيًا واقتصاديًا كبيرًا للأفراد والمجتمعات على حدٍ سواء، وتشير التقديرات إلى أن عدد المصابين به قد تضاعف أكثر من أربع مرات خلال العقود الأربعة الماضية.</p>
@@ -557,7 +528,6 @@
     </div>
   </section>
 
-  <!-- ٢ ما هو مرض السكري -->
   <section id="s2">
     <div class="sec-head"><span class="sec-num" data-reveal="scale">٢</span><span class="sec-title" data-reveal="right">ما هو مرض السكري؟</span><span class="sec-line" data-reveal></span></div>
     <div class="article-cols" data-reveal>
@@ -566,9 +536,7 @@
     </div>
 
     <div class="mech-panel" data-reveal="scale">
-      <!-- تم وضع صورة حقيقية هنا (رابط مباشر من الإنترنت) -->
-<img src="https://i.postimg.cc/FKBB8PBf/pancreas.png" alt="صورة البنكرياس الحقيقية" style="width:100%; height:auto; border-radius:12px; box-shadow:0 10px 20px rgba(0,0,0,0.1);" />      
-      <div>
+<img src="https://raw.githubusercontent.com/rawadbahamdan7-netizen/asda/main/pancreas.png" alt="صورة توضيحية للبنكرياس" />      <div>
         <div class="mech-cap">
           <b>أين يقع البنكرياس ووظيفته؟</b>
           البنكرياس عضو غدي يقع خلف المعدة، وهو المسؤول عن إفراز هرمون الإنسولين الذي يعمل كـ"مفتاح" يفتح أبواب الخلية للسماح لجزيئات الجلوكوز (السكر) بالدخول واستخدامها كطاقة. عندما يقل الإنسولين أو تضعف استجابة الخلايا له (مقاومة الإنسولين)، يتراكم الجلوكوز في الدم بدلًا من دخوله للخلايا، فيرتفع مستوى السكر تدريجيًا.
@@ -605,7 +573,6 @@
     </div>
   </section>
 
-  <!-- ٣ الأسباب -->
   <section id="s3">
     <div class="sec-head"><span class="sec-num" data-reveal="scale">٣</span><span class="sec-title" data-reveal="right">أسباب مرض السكري</span><span class="sec-line" data-reveal></span></div>
     <p data-reveal>تتعدد العوامل التي تساهم في الإصابة بمرض السكري، وتختلف باختلاف نوعه، وأبرزها:</p>
@@ -621,7 +588,6 @@
     </ul>
   </section>
 
-  <!-- ٤ الأعراض -->
   <section id="s4">
     <div class="sec-head"><span class="sec-num" data-reveal="scale">٤</span><span class="sec-title" data-reveal="right">أعراض مرض السكري</span><span class="sec-line" data-reveal></span></div>
     <p data-reveal>قد تظهر أعراض مرض السكري تدريجيًا (خاصة في النوع الثاني) أو بشكل مفاجئ وسريع (كما في النوع الأول)، ومن أبرز العلامات التي تستدعي مراجعة الطبيب:</p>
@@ -637,7 +603,6 @@
     </ul>
   </section>
 
-  <!-- ٥ التشخيص -->
   <section id="s5">
     <div class="sec-head"><span class="sec-num" data-reveal="scale">٥</span><span class="sec-title" data-reveal="right">كيف يتم تشخيص مرض السكري؟</span><span class="sec-line" data-reveal></span></div>
     <p data-reveal>يعتمد تشخيص مرض السكري على مجموعة من التحاليل المخبرية للدم التي تقيس مستوى الجلوكوز، وأهمها:</p>
@@ -655,7 +620,6 @@
     <div class="note-box" data-reveal><b>ملاحظة:</b> التشخيص النهائي يعتمد دومًا على رأي الطبيب المختص وتكرار الفحوصات عند الحاجة؛ هذه المعلومات لأغراض تعليمية عامة فقط.</div>
   </section>
 
-  <!-- ٦ العلاج والأدوات -->
   <section id="s6">
     <div class="sec-head"><span class="sec-num" data-reveal="scale">٦</span><span class="sec-title" data-reveal="right">طرق علاج مرض السكري وأدواته</span><span class="sec-line" data-reveal></span></div>
     <p data-reveal>لا يوجد حتى الآن علاج نهائي يشفي مرض السكري تمامًا، لكن هناك طرقًا فعّالة للسيطرة عليه ومنع مضاعفاته، ويلخصها الجدول التالي:</p>
@@ -674,33 +638,23 @@
       </table>
     </div>
 
-    <!-- إبرة الإنسولين المتحركة -->
     <div class="syringe-showcase" data-reveal="scale">
       <svg viewBox="0 0 260 300" xmlns="http://www.w3.org/2000/svg">
-        <!-- skin surface -->
         <ellipse cx="130" cy="230" rx="110" ry="24" fill="#e7c9a8" opacity="0.9"/>
         <ellipse cx="130" cy="226" rx="100" ry="18" fill="#f0d8bd"/>
-        <!-- moving group: syringe + needle, animates downward to inject -->
         <g class="needle-in-out">
-          <!-- barrel -->
           <rect x="108" y="30" width="44" height="120" rx="6" fill="#eef7f5" stroke="#134f49" stroke-width="3"/>
-          <!-- plunger -->
           <rect x="118" y="10" width="24" height="26" rx="3" fill="#c8e8e2" stroke="#134f49" stroke-width="3"/>
           <line x1="130" y1="0" x2="130" y2="10" stroke="#134f49" stroke-width="4"/>
           <line x1="118" y1="4" x2="142" y2="4" stroke="#134f49" stroke-width="4" stroke-linecap="round"/>
-          <!-- liquid inside -->
           <rect x="112" y="70" width="36" height="76" fill="#5fb8ac" opacity="0.55"/>
-          <!-- measurement lines -->
           <line x1="152" y1="55" x2="160" y2="55" stroke="#134f49" stroke-width="2"/>
           <line x1="152" y1="80" x2="160" y2="80" stroke="#134f49" stroke-width="2"/>
           <line x1="152" y1="105" x2="160" y2="105" stroke="#134f49" stroke-width="2"/>
           <line x1="152" y1="130" x2="160" y2="130" stroke="#134f49" stroke-width="2"/>
-          <!-- needle hub -->
           <path d="M120 150 L140 150 L133 175 L127 175 Z" fill="#c9d6d4" stroke="#134f49" stroke-width="2"/>
-          <!-- needle -->
           <line x1="130" y1="175" x2="130" y2="228" stroke="#8a9b98" stroke-width="4" stroke-linecap="round"/>
         </g>
-        <!-- drop of insulin at tip, appears/fades -->
         <circle class="needle-drop" cx="130" cy="232" r="4" fill="#5fb8ac"/>
         <text x="130" y="270" text-anchor="middle" font-family="Tajawal" font-size="13" fill="#134f49" font-weight="700">الحقن تحت الجلد (Subcutaneous)</text>
       </svg>
@@ -717,7 +671,6 @@
       </div>
     </div>
 
-    <!-- بطاقات الأدوات -->
     <div class="device-grid stagger" data-reveal>
       <div class="device-card">
         <svg viewBox="0 0 100 100"><rect x="20" y="40" width="60" height="16" rx="4" fill="none" stroke="#1f7a70" stroke-width="3"/><circle cx="30" cy="48" r="4" fill="#e0623f"/><line x1="80" y1="45" x2="92" y2="42" stroke="#1f7a70" stroke-width="3"/><line x1="80" y1="51" x2="92" y2="54" stroke="#1f7a70" stroke-width="3"/><rect x="38" y="60" width="20" height="26" rx="3" fill="none" stroke="#c99a3f" stroke-width="3"/><line x1="43" y1="70" x2="53" y2="70" stroke="#c99a3f" stroke-width="2"/></svg>
@@ -737,7 +690,6 @@
     </div>
   </section>
 
-  <!-- ٧ مستويات السكر الطبيعية -->
   <section id="s7">
     <div class="sec-head"><span class="sec-num" data-reveal="scale">٧</span><span class="sec-title" data-reveal="right">مستويات سكر الدم الطبيعية والمرضية</span><span class="sec-line" data-reveal></span></div>
     <p data-reveal>يساعد فهم النطاقات التالية (بوحدة ملغم/ديسيلتر عند الصيام) في تفسير نتائج فحوصات السكر وتحديد إن كانت طبيعية أو تشير إلى مقدمات السكري أو الإصابة الفعلية:</p>
@@ -767,77 +719,46 @@
     <div class="note-box" data-reveal><b>ملاحظة:</b> هذه النطاقات تقريبية للتوضيح العلمي العام، وتختلف معايير التشخيص الدقيقة قليلًا حسب نوع الفحص المستخدم (صائم، تراكمي، أو عشوائي)، ويجب دائمًا الرجوع للطبيب لتفسير النتائج.</div>
   </section>
 
-  <!-- ٨ المضاعفات: خريطة جسم + بطاقات -->
   <section id="s8">
     <div class="sec-head"><span class="sec-num" data-reveal="scale">٨</span><span class="sec-title" data-reveal="right">مضاعفات مرض السكري غير المنضبط</span><span class="sec-line" data-reveal></span></div>
     <p data-reveal>عند إهمال العلاج وبقاء مستوى السكر مرتفعًا لفترات طويلة، يؤثر ذلك سلبًا على عدة أعضاء رئيسية في الجسم، كما يوضح المخطط التالي:</p>
     <div class="compli-wrap" data-reveal="scale">
       <div class="bodymap">
         <svg viewBox="0 0 200 380" xmlns="http://www.w3.org/2000/svg">
-          <!-- body silhouette -->
           <circle cx="100" cy="38" r="24" fill="#d9cfb8"/>
           <path d="M60 75 Q100 58 140 75 L150 190 Q100 210 50 190 Z" fill="#d9cfb8"/>
           <path d="M60 80 L30 150" stroke="#d9cfb8" stroke-width="16" stroke-linecap="round"/>
           <path d="M140 80 L170 150" stroke="#d9cfb8" stroke-width="16" stroke-linecap="round"/>
           <path d="M70 195 L60 340" stroke="#d9cfb8" stroke-width="20" stroke-linecap="round"/>
           <path d="M130 195 L140 340" stroke="#d9cfb8" stroke-width="20" stroke-linecap="round"/>
-
-          <!-- brain marker -->
           <circle cx="100" cy="20" r="6" fill="#6b5b95"/>
           <line x1="106" y1="20" x2="180" y2="15" stroke="#6b5b95" stroke-width="1.5" stroke-dasharray="3 3"/>
           <text x="182" y="18" font-family="Tajawal" font-size="11" fill="#134f49" font-weight="700">الدماغ</text>
-
-          <!-- eyes marker -->
           <circle cx="100" cy="32" r="6" fill="#1f7a70"/>
           <line x1="106" y1="32" x2="150" y2="45" stroke="#1f7a70" stroke-width="1.5" stroke-dasharray="3 3"/>
           <text x="152" y="48" font-family="Tajawal" font-size="11" fill="#134f49" font-weight="700">العينان</text>
-
-          <!-- heart marker -->
           <circle cx="92" cy="105" r="6" fill="#e0623f"/>
           <line x1="86" y1="105" x2="20" y2="105" stroke="#e0623f" stroke-width="1.5" stroke-dasharray="3 3"/>
           <text x="18" y="102" text-anchor="end" font-family="Tajawal" font-size="11" fill="#134f49" font-weight="700">القلب</text>
-
-          <!-- kidneys marker -->
           <circle cx="108" cy="150" r="6" fill="#c99a3f"/>
           <line x1="114" y1="150" x2="180" y2="150" stroke="#c99a3f" stroke-width="1.5" stroke-dasharray="3 3"/>
           <text x="182" y="153" font-family="Tajawal" font-size="11" fill="#134f49" font-weight="700">الكلى</text>
-
-          <!-- feet marker -->
           <circle cx="65" cy="335" r="6" fill="#134f49"/>
           <line x1="59" y1="335" x2="15" y2="335" stroke="#134f49" stroke-width="1.5" stroke-dasharray="3 3"/>
           <text x="13" y="332" text-anchor="end" font-family="Tajawal" font-size="11" fill="#134f49" font-weight="700">الأطراف</text>
         </svg>
       </div>
       <div class="compli-grid stagger" data-reveal>
-        <div class="compli-card">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#e0623f" stroke-width="1.8"><path d="M12 21s-7-4.5-9.5-9C.5 8 2 4 6 4c2.2 0 3.7 1.3 4.5 2.4C11.3 5.3 12.8 4 15 4c4 0 5.5 4 3.5 8-2.5 4.5-9.5 9-9.5 9z"/><polyline points="6,12 9,12 10.5,9 13,15 14.5,12 18,12"/></svg>
-          <div><h5>القلب والأوعية</h5><p>يرفع خطر الإصابة بأمراض القلب والسكتة الدماغية وارتفاع ضغط الدم وتصلّب الشرايين.</p></div>
-        </div>
-        <div class="compli-card">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#c99a3f" stroke-width="1.8"><path d="M12 3c-4 5-6 8-6 11a6 6 0 0 0 12 0c0-3-2-6-6-11z"/><path d="M9 15c0-2 1.5-3 3-3"/></svg>
-          <div><h5>الكلى</h5><p>يؤدي إلى تلف تدريجي في وظائف الكلى (اعتلال الكلى السكري) وقد يصل إلى الفشل الكلوي.</p></div>
-        </div>
-        <div class="compli-card">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#1f7a70" stroke-width="1.8"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
-          <div><h5>العينان</h5><p>يسبب اعتلال الشبكية السكري الذي قد يؤدي إلى ضعف البصر أو العمى إذا أُهمل.</p></div>
-        </div>
-        <div class="compli-card">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#134f49" stroke-width="1.8"><path d="M8 21c0-4 2-6 2-9a4 4 0 0 1 8 0c0 2 1 3 1 5"/><path d="M12 12c0-3-2-4-2-7a3 3 0 0 1 6 0"/></svg>
-          <div><h5>الأعصاب والقدمين</h5><p>يسبب تنميلًا وفقدان إحساس في الأطراف، ويزيد خطر التقرحات المزمنة وأحيانًا البتر.</p></div>
-        </div>
-        <div class="compli-card">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#6b5b95" stroke-width="1.8"><circle cx="12" cy="8" r="5"/><path d="M9 13v6M15 13v6M9 19h6"/></svg>
-          <div><h5>الدماغ والأوعية الدماغية</h5><p>يرفع احتمالية الإصابة بالسكتات الدماغية وقد يؤثر على الذاكرة على المدى الطويل.</p></div>
-        </div>
-        <div class="compli-card">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#8f6a20" stroke-width="1.8"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/><circle cx="12" cy="12" r="3.5"/></svg>
-          <div><h5>الجلد والمناعة</h5><p>يزيد قابلية الإصابة بالعدوى الجلدية والفطرية بسبب ضعف الدورة الدموية والمناعة.</p></div>
-        </div>
+        <div class="compli-card"><svg viewBox="0 0 24 24" fill="none" stroke="#e0623f" stroke-width="1.8"><path d="M12 21s-7-4.5-9.5-9C.5 8 2 4 6 4c2.2 0 3.7 1.3 4.5 2.4C11.3 5.3 12.8 4 15 4c4 0 5.5 4 3.5 8-2.5 4.5-9.5 9-9.5 9z"/><polyline points="6,12 9,12 10.5,9 13,15 14.5,12 18,12"/></svg><div><h5>القلب والأوعية</h5><p>يرفع خطر الإصابة بأمراض القلب والسكتة الدماغية وارتفاع ضغط الدم وتصلّب الشرايين.</p></div></div>
+        <div class="compli-card"><svg viewBox="0 0 24 24" fill="none" stroke="#c99a3f" stroke-width="1.8"><path d="M12 3c-4 5-6 8-6 11a6 6 0 0 0 12 0c0-3-2-6-6-11z"/><path d="M9 15c0-2 1.5-3 3-3"/></svg><div><h5>الكلى</h5><p>يؤدي إلى تلف تدريجي في وظائف الكلى (اعتلال الكلى السكري) وقد يصل إلى الفشل الكلوي.</p></div></div>
+        <div class="compli-card"><svg viewBox="0 0 24 24" fill="none" stroke="#1f7a70" stroke-width="1.8"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg><div><h5>العينان</h5><p>يسبب اعتلال الشبكية السكري الذي قد يؤدي إلى ضعف البصر أو العمى إذا أُهمل.</p></div></div>
+        <div class="compli-card"><svg viewBox="0 0 24 24" fill="none" stroke="#134f49" stroke-width="1.8"><path d="M8 21c0-4 2-6 2-9a4 4 0 0 1 8 0c0 2 1 3 1 5"/><path d="M12 12c0-3-2-4-2-7a3 3 0 0 1 6 0"/></svg><div><h5>الأعصاب والقدمين</h5><p>يسبب تنميلًا وفقدان إحساس في الأطراف، ويزيد خطر التقرحات المزمنة وأحيانًا البتر.</p></div></div>
+        <div class="compli-card"><svg viewBox="0 0 24 24" fill="none" stroke="#6b5b95" stroke-width="1.8"><circle cx="12" cy="8" r="5"/><path d="M9 13v6M15 13v6M9 19h6"/></svg><div><h5>الدماغ والأوعية الدماغية</h5><p>يرفع احتمالية الإصابة بالسكتات الدماغية وقد يؤثر على الذاكرة على المدى الطويل.</p></div></div>
+        <div class="compli-card"><svg viewBox="0 0 24 24" fill="none" stroke="#8f6a20" stroke-width="1.8"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/><circle cx="12" cy="12" r="3.5"/></svg><div><h5>الجلد والمناعة</h5><p>يزيد قابلية الإصابة بالعدوى الجلدية والفطرية بسبب ضعف الدورة الدموية والمناعة.</p></div></div>
       </div>
     </div>
   </section>
 
-  <!-- ٩ الوقاية -->
   <section id="s9">
     <div class="sec-head"><span class="sec-num" data-reveal="scale">٩</span><span class="sec-title" data-reveal="right">الوقاية من مرض السكري</span><span class="sec-line" data-reveal></span></div>
     <p data-reveal>رغم أن النوع الأول لا يمكن الوقاية منه لارتباطه بعوامل مناعية ووراثية، إلا أن النوع الثاني يمكن تجنبه أو تأخير ظهوره في كثير من الحالات باتباع هذه الخطوات:</p>
@@ -851,40 +772,22 @@
     </ul>
   </section>
 
-  <!-- ١٠ خرافات وحقائق -->
   <section id="s10">
     <div class="sec-head"><span class="sec-num" data-reveal="scale">١٠</span><span class="sec-title" data-reveal="right">خرافات شائعة وحقائق علمية</span><span class="sec-line" data-reveal></span></div>
     <p data-reveal>ينتشر حول مرض السكري عدد من المفاهيم الخاطئة التي قد تُصعّب على المريض التعايش الصحيح مع المرض، ومن أبرزها:</p>
     <div class="myths stagger" data-reveal>
-      <div class="myth-row">
-        <div class="myth-box myth"><span class="tag">خرافة</span><p>أكل السكر بكثرة هو السبب الوحيد للإصابة بمرض السكري.</p></div>
-        <div class="myth-box fact"><span class="tag">حقيقة</span><p>الأسباب متعددة (وراثة، وزن، خمول، مناعة ذاتية)، والسكريات عامل خطر مساهم وليس سببًا وحيدًا مباشرًا.</p></div>
-      </div>
-      <div class="myth-row">
-        <div class="myth-box myth"><span class="tag">خرافة</span><p>مريض السكري ممنوع عليه تناول أي نوع من الفواكه نهائيًا.</p></div>
-        <div class="myth-box fact"><span class="tag">حقيقة</span><p>يمكن تناول معظم الفواكه باعتدال وضمن الكمية المناسبة، مع مراعاة نوعها وتوقيتها ضمن الخطة الغذائية.</p></div>
-      </div>
-      <div class="myth-row">
-        <div class="myth-box myth"><span class="tag">خرافة</span><p>النوع الثاني من السكري مرض بسيط لا يحتاج علاجًا جادًا.</p></div>
-        <div class="myth-box fact"><span class="tag">حقيقة</span><p>إهماله يؤدي إلى مضاعفات خطيرة في القلب والكلى والعينين، ويحتاج التزامًا طبيًا وسلوكيًا مستمرًا.</p></div>
-      </div>
-      <div class="myth-row">
-        <div class="myth-box myth"><span class="tag">خرافة</span><p>الأشخاص النحيفون لا يصابون بمرض السكري.</p></div>
-        <div class="myth-box fact"><span class="tag">حقيقة</span><p>الوزن عامل خطر مهم لكنه ليس شرطًا؛ فالعوامل الوراثية والمناعية قد تسبب الإصابة حتى مع وزن طبيعي.</p></div>
-      </div>
-      <div class="myth-row">
-        <div class="myth-box myth"><span class="tag">خرافة</span><p>الإنسولين علاج للحالات المتأخرة فقط أو "خط النهاية".</p></div>
-        <div class="myth-box fact"><span class="tag">حقيقة</span><p>الإنسولين علاج أساسي وآمن يُستخدم حسب حاجة الجسم، وقد يبدأ مبكرًا لتحسين ضبط السكر ومنع المضاعفات.</p></div>
-      </div>
+      <div class="myth-row"><div class="myth-box myth"><span class="tag">خرافة</span><p>أكل السكر بكثرة هو السبب الوحيد للإصابة بمرض السكري.</p></div><div class="myth-box fact"><span class="tag">حقيقة</span><p>الأسباب متعددة (وراثة، وزن، خمول، مناعة ذاتية)، والسكريات عامل خطر مساهم وليس سببًا وحيدًا مباشرًا.</p></div></div>
+      <div class="myth-row"><div class="myth-box myth"><span class="tag">خرافة</span><p>مريض السكري ممنوع عليه تناول أي نوع من الفواكه نهائيًا.</p></div><div class="myth-box fact"><span class="tag">حقيقة</span><p>يمكن تناول معظم الفواكه باعتدال وضمن الكمية المناسبة، مع مراعاة نوعها وتوقيتها ضمن الخطة الغذائية.</p></div></div>
+      <div class="myth-row"><div class="myth-box myth"><span class="tag">خرافة</span><p>النوع الثاني من السكري مرض بسيط لا يحتاج علاجًا جادًا.</p></div><div class="myth-box fact"><span class="tag">حقيقة</span><p>إهماله يؤدي إلى مضاعفات خطيرة في القلب والكلى والعينين، ويحتاج التزامًا طبيًا وسلوكيًا مستمرًا.</p></div></div>
+      <div class="myth-row"><div class="myth-box myth"><span class="tag">خرافة</span><p>الأشخاص النحيفون لا يصابون بمرض السكري.</p></div><div class="myth-box fact"><span class="tag">حقيقة</span><p>الوزن عامل خطر مهم لكنه ليس شرطًا؛ فالعوامل الوراثية والمناعية قد تسبب الإصابة حتى مع وزن طبيعي.</p></div></div>
+      <div class="myth-row"><div class="myth-box myth"><span class="tag">خرافة</span><p>الإنسولين علاج للحالات المتأخرة فقط أو "خط النهاية".</p></div><div class="myth-box fact"><span class="tag">حقيقة</span><p>الإنسولين علاج أساسي وآمن يُستخدم حسب حاجة الجسم، وقد يبدأ مبكرًا لتحسين ضبط السكر ومنع المضاعفات.</p></div></div>
     </div>
   </section>
 
-  <!-- ١١ الانتشار العالمي - رسمان بيانيان -->
   <section id="s11">
     <div class="sec-head"><span class="sec-num" data-reveal="scale">١١</span><span class="sec-title" data-reveal="right">مرض السكري حول العالم</span><span class="sec-line" data-reveal></span></div>
     <p data-reveal>ينتشر مرض السكري في كل قارات العالم تقريبًا وليس في منطقة واحدة فقط. الرسم الأول يوضح الدول الأعلى من حيث <strong class="hl">نسبة</strong> الإصابة بين السكان، والرسم الثاني يوضح الدول الأعلى من حيث <strong class="hl">العدد الفعلي</strong> للمصابين، وهي موزّعة على آسيا وأمريكا وأفريقيا وأوروبا:</p>
 
-    <!-- رسم 1: نسبة الانتشار -->
     <div class="chart-panel" data-reveal="scale">
       <svg class="globe-deco" viewBox="0 0 100 100"><circle cx="50" cy="50" r="46" fill="none" stroke="#134f49" stroke-width="3"/><ellipse cx="50" cy="50" rx="46" ry="18" fill="none" stroke="#134f49" stroke-width="2"/><ellipse cx="50" cy="50" rx="20" ry="46" fill="none" stroke="#134f49" stroke-width="2"/><line x1="4" y1="50" x2="96" y2="50" stroke="#134f49" stroke-width="2"/></svg>
       <div class="chart-title"><svg viewBox="0 0 24 24" fill="none" stroke="#e0623f" stroke-width="2"><path d="M4 19h16M7 19V9M12 19V5M17 19v7"/></svg>الأعلى نسبةً (٪ من البالغين)</div>
@@ -902,7 +805,6 @@
       <p class="chart-note">النسبة المئوية لانتشار مرض السكري بين البالغين (من أصل حد أقصى ٣٥٪) — Wise Voter.</p>
     </div>
 
-    <!-- رسم 2: عدد المصابين عالميًا -->
     <div class="chart-panel" data-reveal="scale">
       <div class="chart-title"><svg viewBox="0 0 24 24" fill="none" stroke="#1f7a70" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 4 6 4 9s-1.5 6.5-4 9c-2.5-2.5-4-6-4-9s1.5-6.5 4-9z"/></svg>الأعلى عددًا للمصابين حول العالم (بالمليون)</div>
       <div class="bars">
@@ -922,7 +824,6 @@
       </div>
     </div>
 
-    <!-- رسم 3: النمو التاريخي للحالات -->
     <div class="chart-panel" data-reveal="scale">
       <div class="chart-title"><svg viewBox="0 0 24 24" fill="none" stroke="#8f6a20" stroke-width="2"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg>نمو عدد البالغين المصابين عالميًا عبر العقود (بالمليون)</div>
       <div class="bars">
@@ -952,7 +853,6 @@
     </div>
   </section>
 
-  <!-- ١٢ تاريخ المرض -->
   <section id="s12">
     <div class="sec-head"><span class="sec-num" data-reveal="scale">١٢</span><span class="sec-title" data-reveal="right">محطات في تاريخ اكتشاف مرض السكري</span><span class="sec-line" data-reveal></span></div>
     <p data-reveal>يعود وصف أعراض مرض السكري إلى آلاف السنين، لكن فهمه العلمي وعلاجه الفعّال لم يتحققا إلا في القرن العشرين:</p>
@@ -968,7 +868,6 @@
     </div>
   </section>
 
-  <!-- الخاتمة -->
   <section>
     <div class="sec-head"><span class="sec-num" data-reveal="scale">٭</span><span class="sec-title" data-reveal="right">الخاتمة</span><span class="sec-line" data-reveal></span></div>
     <div class="cards stagger" data-reveal>
@@ -979,34 +878,17 @@
     <p style="margin-top:26px;" data-reveal>في الختام، يبقى مرض السكري تحديًا صحيًا عالميًا حقيقيًا يمتد من آسيا إلى أمريكا وأفريقيا، ويستدعي تكاتف الجهود التوعوية والطبية للحد من انتشاره، وتبقى الوقاية القائمة على نمط حياة صحي هي خط الدفاع الأول ضد هذا المرض، إلى جانب استمرار التطور العلمي في أدوات القياس والعلاج التي جعلت التعايش معه أسهل بكثير مما كان عليه قبل قرن من الزمن.</p>
   </section>
 
-  <!-- ١٣ أسئلة شائعة -->
   <section id="s13">
     <div class="sec-head"><span class="sec-num" data-reveal="scale">١٣</span><span class="sec-title" data-reveal="right">أسئلة شائعة</span><span class="sec-line" data-reveal></span></div>
     <div class="faq stagger" data-reveal>
-      <details class="faq-item">
-        <summary>هل مرض السكري معدٍ ينتقل بالعدوى؟</summary>
-        <div class="faq-a">لا، مرض السكري ليس مرضًا معديًا ولا ينتقل عبر المخالطة أو الطعام أو الهواء؛ فهو اضطراب استقلابي مرتبط بعوامل وراثية ومناعية وبيئية.</div>
-      </details>
-      <details class="faq-item">
-        <summary>هل يمكن الشفاء التام من مرض السكري؟</summary>
-        <div class="faq-a">النوع الأول لا يُشفى حاليًا ويحتاج إنسولين مدى الحياة، أما النوع الثاني فقد تتحسن حالته كثيرًا أو يدخل في "مرحلة هدوء" بفقدان الوزن ونمط حياة صحي، لكنه يتطلب متابعة مستمرة.</div>
-      </details>
-      <details class="faq-item">
-        <summary>هل الأطفال معرّضون للإصابة بالسكري؟</summary>
-        <div class="faq-a">نعم، خاصة النوع الأول الذي يظهر غالبًا في الطفولة والمراهقة، كما ازداد مؤخرًا ظهور النوع الثاني بين الأطفال المصابين بالسمنة.</div>
-      </details>
-      <details class="faq-item">
-        <summary>ما الفرق بين سكر الدم العشوائي والصائم؟</summary>
-        <div class="faq-a">السكر الصائم يُقاس بعد الامتناع عن الطعام ٨ ساعات على الأقل ويعطي صورة أدق للحالة الأساسية، بينما العشوائي يُقاس في أي وقت ويُستخدم غالبًا مع وجود أعراض واضحة.</div>
-      </details>
-      <details class="faq-item">
-        <summary>هل الرياضة تخفض سكر الدم فورًا؟</summary>
-        <div class="faq-a">نعم غالبًا، لأن العضلات تستهلك الجلوكوز كطاقة أثناء النشاط البدني، لكن يجب على مرضى النوع الأول الحذر من الانخفاض الشديد ومراقبة السكر قبل وبعد التمرين.</div>
-      </details>
+      <details class="faq-item"><summary>هل مرض السكري معدٍ ينتقل بالعدوى؟</summary><div class="faq-a">لا، مرض السكري ليس مرضًا معديًا ولا ينتقل عبر المخالطة أو الطعام أو الهواء؛ فهو اضطراب استقلابي مرتبط بعوامل وراثية ومناعية وبيئية.</div></details>
+      <details class="faq-item"><summary>هل يمكن الشفاء التام من مرض السكري؟</summary><div class="faq-a">النوع الأول لا يُشفى حاليًا ويحتاج إنسولين مدى الحياة، أما النوع الثاني فقد تتحسن حالته كثيرًا أو يدخل في "مرحلة هدوء" بفقدان الوزن ونمط حياة صحي، لكنه يتطلب متابعة مستمرة.</div></details>
+      <details class="faq-item"><summary>هل الأطفال معرّضون للإصابة بالسكري؟</summary><div class="faq-a">نعم، خاصة النوع الأول الذي يظهر غالبًا في الطفولة والمراهقة، كما ازداد مؤخرًا ظهور النوع الثاني بين الأطفال المصابين بالسمنة.</div></details>
+      <details class="faq-item"><summary>ما الفرق بين سكر الدم العشوائي والصائم؟</summary><div class="faq-a">السكر الصائم يُقاس بعد الامتناع عن الطعام ٨ ساعات على الأقل ويعطي صورة أدق للحالة الأساسية، بينما العشوائي يُقاس في أي وقت ويُستخدم غالبًا مع وجود أعراض واضحة.</div></details>
+      <details class="faq-item"><summary>هل الرياضة تخفض سكر الدم فورًا؟</summary><div class="faq-a">نعم غالبًا، لأن العضلات تستهلك الجلوكوز كطاقة أثناء النشاط البدني، لكن يجب على مرضى النوع الأول الحذر من الانخفاض الشديد ومراقبة السكر قبل وبعد التمرين.</div></details>
     </div>
   </section>
 
-  <!-- المصادر والمراجع -->
   <section id="s14">
     <div class="sec-head"><span class="sec-num" data-reveal="scale">٭</span><span class="sec-title" data-reveal="right">المصادر والمراجع</span><span class="sec-line" data-reveal></span></div>
     <ul class="refs stagger" data-reveal>
@@ -1037,7 +919,6 @@
   }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
   revealEls.forEach(el => io.observe(el));
 
-  // animate all bar charts (each panel can have its own max scale)
   document.querySelectorAll('.chart-panel').forEach(panel => {
     const barIO = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -1057,7 +938,6 @@
     barIO.observe(panel);
   });
 
-  // animate glucose gauges
   document.querySelectorAll('.gauge-track').forEach(track => {
     const gIO = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -1079,7 +959,6 @@
     progressFill.style.width = scrolled + '%';
   });
 
-  // side dot nav active state
   const dotLinks = document.querySelectorAll('.dotnav a');
   const trackedSections = Array.from(dotLinks).map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
   const dotIO = new IntersectionObserver((entries) => {
@@ -1092,14 +971,12 @@
   }, { threshold: 0.4, rootMargin: '-10% 0px -60% 0px' });
   trackedSections.forEach(sec => dotIO.observe(sec));
 
-  // dark / light theme toggle
   const themeBtn = document.getElementById('themeToggle');
   themeBtn.addEventListener('click', () => {
     document.body.classList.toggle('dark');
     themeBtn.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
   });
 
-  // count-up numbers with Arabic-Indic digits
   const arDigits = ['٠','١','٢','٣','٤','٥','٦','٧','٨','٩'];
   function toArabicDigits(n){ return String(n).replace(/[0-9]/g, d => arDigits[d]); }
   document.querySelectorAll('[data-count]').forEach(el => {
